@@ -26,6 +26,7 @@ public class Main {
             b = romanToInt(s[2]);
             intT = false;
         } else throw new IllegalStateException("Wrong expression type! Example '1 + 1' or 'V + II'");
+        if (a > 10 || b > 10)  throw new IllegalStateException("The numbers should not be more than 10");
         switch (s[1]) {
             case ("*") -> otv = a * b;
             case ("/") -> otv = a / b;
